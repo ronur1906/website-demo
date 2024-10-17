@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contect.html">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>MYBLOGSs </title>
+</head>
+<body>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+  
+        ul{
+            list-style-type: none;
+            width: 25%;
+        }
+        ul li{
+            padding: 7px ;
+            margin-left: -10px;
+              
+        }
+        ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+        }
+         
+        ul li :hover{
+            background-color:red;  
+            transition: 0.5;
+        }
+       
+     
+      
+    </style>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>home</a></li>
+            <li><a href="contect.html"><i class="fa-solid fa-comment"></i>contect</a></li>
+            <li><a href="project.html"><i class="fa-solid fa-file"></i>project</a></li>
+            <li><a href="degerlendirme.html"><i class="fa-solid fa-question"></i>değerledirme</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket Formu</title>
+    <style>
+        body {
+            background-image: url(register.jpg); /* Arka plan resmi */
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            width: 300px;
+        }
+        input, select {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form id="surveyForm">
+        <h1>Anket Formu</h1>
+        <input type="text" id="firstName" placeholder="İsim" required>
+        <input type="text" id="lastName" placeholder="Soyisim" required>
+        
+        <label for="rating">Sayfayı Puanla:</label>
+        <select id="rating" required>
+            <option value="">Seçiniz</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button type="submit">Gönder</button>
+    </form>
+
+    <script>
+        document.getElementById('surveyForm').onsubmit = function(event) {
+            event.preventDefault(); // Formun varsayılan gönderimini engelle
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const rating = document.getElementById('rating').value;
+
+            alert(`Teşekkürler, ${firstName} ${lastName}! Değerlendirmeniz: ${rating}`);
+
+            // Burada veriyi bir sunucuya göndermek için AJAX kullanılabilir
+            // E-posta bildirimleri için bir sunucu tarafı kodu gerekecek
+        };
+    </script>
+</body>
+</html>
+
+
+
+
